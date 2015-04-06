@@ -243,15 +243,33 @@ angular.module('starter.controllers', [])
     }
 
 })
-.controller('ChartCtrl', function($scope, $rootScope, $localstorage, $state, $http) {
-  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-  $scope.series = ['Series A', 'Series B'];
-  $scope.data = [
-    [65, 59, 80, 81, 56, 55, 40],
-    [28, 48, 40, 19, 86, 27, 90]
-  ];
-  $scope.onClick = function (points, evt) {
-    console.log(points, evt);
-  };
+.controller('ChartCtrl', function($scope, $rootScope, $localstorage, $state, $http, _) {
+   
+   $scope.labels = [];
+   $scope.data = [];
+   $scope.legend = true;
+
+   var expenses = $localstorage.get('expenses');
+   expenses = JSON.parse(expenses);
+   console.log(expenses);
+   expenses = _.groupBy(expenses, function(obj){
+      return obj.category.label;
+   });
+
+   for(label in expenses){
+
+      $scope.labels.push(label);
+      console.log(label);
+      var total = 0;
+      for(var i=0; i < expenses[label].length; i++){
+        total = total + expenses[label][i].amount;
+      }
+      //console.log(total)
+      $scope.data.push(total);
+   }
+
+   console.log(expenses);
+
+              
 
 });

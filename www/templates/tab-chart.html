@@ -1,9 +1,11 @@
 <ion-view view-title="Dashboard">
-  <ion-content >
-  {{data}}ss
-   <canvas id="line" class="chart chart-line" data="data"
-     labels="labels" legend="true" series="series"
-     click="onClick">
-   </canvas> 
+  <ion-content  class="padding">
+      <ion-list>
+		<ion-item >
+		  <canvas id="doughnut" class="chart chart-doughnut" data="data"
+		  labels="labels" legend="true"></canvas>
+		</ion-item>
+      </ion-list>
+ 
   </ion-content>
 </ion-view>
