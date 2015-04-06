@@ -1,0 +1,52 @@
+[
+{
+	"label":"General",
+    "icon":"ion-ios-pricetags-outline",
+    "icon-selected":"ion-ios-pricetags"
+
+},
+{
+	"label":"Food",
+    "icon":"ion-ios-nutrition-outline",
+    "icon-selected":"ion-ios-nutrition"
+},
+{
+	"label":"Shelter",
+    "icon":"ion-ios-home-outline",
+    "icon-selected":"ion-ios-home"
+},
+{
+	"label":"Transport",
+	"icon" :"ion-ios-speedometer-outline",
+	"icon-selected" :"ion-ios-speedometer"
+},
+{
+	"label":"Medical",
+	"icon" :"ion-ios-medkit-outline",
+	"icon-selected" :"ion-ios-medkit"
+},
+{
+	"label":"Drink",
+	"icon" :"ion-ios-wineglass-outline",
+	"icon-selected" :"ion-ios-wineglass"
+},
+{
+	"label":"Snack",
+	"icon" :"ion-ios-pint-outline",
+	"icon-selected" :"ion-ios-pint"
+},
+{
+	"label":"Repair",
+	"icon" :"ion-ios-bolt-outline",
+	"icon-selected" :"ion-ios-bolt"
+},
+{
+	"label":"Stupidity",
+	"icon" :"ion-ios-body-outline",
+	"icon-selected" :"ion-ios-body"
+},
+{
+	"label":"Equipments",
+	"icon" :"ion-ios-cog-outline",
+	"icon-selected" :"ion-ios-cog"
+}]

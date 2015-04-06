@@ -1,0 +1,22 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+     <div class="item item-select">
+      <div class="label">
+      Currency
+       </div>
+       <select  ng-model="settings.currency" ng-options="c.label for c in currencies">
+> </select>
+
+    </div>
+    
+
+     <div class="item item-button-right">
+     	Clear Data
+       <button class="button button-small button-assertive" ng-click="reset()"> Clear</button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+[   
+    {
+      "label":"MYR",
+      "country":"Malaysia",
+      "rate" : {
+         "MYR" : "1",
+         "THB" : "0.11",
+         "EUR" : "3.99"
+
+      }
+    },
+    {
+      "label":"THB",
+      "country":"Thailand",
+      "rate" : "0.11"
+    },
+    {
+      "label":"EUR",
+      "country":"EU",
+      "rate" : "3.99"
+    }
+]

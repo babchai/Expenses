@@ -1,0 +1,42 @@
+<ion-view view-title="Dashboard">
+  <ion-content >
+    <div class="card">
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">Date</span>
+        <input type="date" ng-model="expenses.date" value="2015-04-04">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Amount - {{expenses.currency}}</span>
+        <div>
+           <input type="number" ng-model="expenses.amount" placeholder="0.00">
+        </div>
+      </label>
+      <div class="item item-input item-stacked-label">
+        <span class="input-label">Category</span>
+        <div class="row" ng-repeat="rows in categories">
+          <div class="col" ng-repeat="item in rows" ng-class="className" style="text-align: center;">
+              <button class="button button-icon icon {{item.icon}}" id="{{$index}}" name="{{item.label}}" ng-click="selected(item ,$event)" ></button> 
+              <br><p style="font-size:60%">{{item.label}}</p>
+          </div>    
+        </div>    
+      </div>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description (Optional)</span>
+        <input type="text" placeholder="" ng-model="expenses.description" >
+      </label>
+      <label class="item item-input item-stacked-label">
+        <center>
+          <button class="button button-icon icon ion-camera" ng-click="getPhoto()"></button><br>
+          <img ng-src="{{preview_image}}" style="max-width: 100%">
+        </center>
+      </label>
+    </div>
+
+  </div>
+ 
+    <button class="button  button-block button-positive" ng-click="save()">
+      Done
+    </button>
+  </ion-content>
+</ion-view>
