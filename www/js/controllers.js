@@ -184,6 +184,7 @@ angular.module('starter.controllers', [])
     $scope.title = $stateParams.key; 
     $scope.total = 0;
 
+   var total = 0
     var expenses = $localstorage.get('expenses');
     expenses = JSON.parse(expenses);
 
@@ -196,15 +197,15 @@ angular.module('starter.controllers', [])
                   {
                      if(expenses[j].date == $stateParams.key){
 
-                       console.log(res.data[i].rate[expenses[j].currency]);
                         if(typeof res.data[i].rate[expenses[j].currency] == "undefined")
                            res.data[i].rate[expenses[j].currency] = 1;
 
-                       var rate = res.data[i].rate[expenses[j].currency];
-                       expenses[j].amount = expenses[j].amount * rate;
-                       $scope.Details.push(expenses[j]);
-                       var total = $scope.total + expenses[j].amount;
-                       $scope.total = total;
+                        var rate = res.data[i].rate[expenses[j].currency];
+                        expenses[j].amount = expenses[j].amount * rate;
+                        $scope.Details.push(expenses[j]);
+                         total = total + expenses[j].amount;
+                        console.log(total);
+                        $scope.total = total.toFixed(2);
                      }
                   }
                }
